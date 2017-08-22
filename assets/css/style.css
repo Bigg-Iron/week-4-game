@@ -9,3 +9,8 @@ img.img-responsive {
     margin-left: auto;
     margin-right: auto;
 }
+
+a.btn-primary {
+    margin: 2%;
+    padding: 2%;
+}
