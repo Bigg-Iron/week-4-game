@@ -6,8 +6,8 @@ $(document).ready(function () {
     // Populates crystals in html on "crystalize" button 
     // =======================================================================================
 
-    // Appends the crystal images to the DOM
-    $(".crystalizeBtn").click(function () {
+    // Appends the crystal images to the DOM. (.one does it only one time)
+    $( ".crystalizeBtn" ).one( "click", function() {
         var crystal1 = $('<img src="assets/images/crystal1.png" class="img-responsive crystal1" alt="Ohh shiny...">')
         $(".crystal1").append(crystal1);
         var crystal2 = $('<img src="assets/images/crystal2.png" class="img-responsive crystal2" alt="Ohh shiny...">')
@@ -20,7 +20,7 @@ $(document).ready(function () {
     });
 
    
-
+    
 
 
     // Generates a random integer when user clicks a crystal, and logs it to the console.
