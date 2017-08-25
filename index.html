@@ -19,17 +19,20 @@
 
 
 <body>
+
+    <!-- Jumbotron with Crystalize button -->
     <div class="jumbotron">
         <div class="container">
             <h1>Hello!</h1>
-            <p> This is a crystal game. </p>
+            <p> This is a crystal game. Click on a crystal to add it to your bag -- if your score matches the random number, you win! </p>
             <p>
                 <a class="btn btn-primary btn-lg crystalizeBtn" href="#">Crystalize</a>
             </p>
         </div>
     </div>
 
-    <div class="container-responsive">
+    <!-- Container with crystal images -->
+    <div class="container-fluid">
         <div class="row">
             <div class="col-xs-3">
                 <div class="img-responsive crystal1">
@@ -57,6 +60,28 @@
 
         </div>
     </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card-body">
+                    <h2> Random Number: </h2>
+                    <p class="randomNum">120</p>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="card-body">
+                    <h2> Your Score: </h2>
+                    <p class="userScore"> 0 </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
                 
 
 
