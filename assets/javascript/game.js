@@ -1,35 +1,25 @@
 // jQuery document function 
 $(document).ready(function () {
 
+
+    
     // Populates crystals in html on "crystalize" button 
     // =======================================================================================
 
-    // Appending the crystal image 1 to the DOM
+    // Appends the crystal images to the DOM
     $(".crystalizeBtn").click(function () {
-        var crystal = $('<img src="assets/images/crystal1.png" class="img-responsive crystal1" alt="Ohh shiny...">')
-        $(".crystal1").append(crystal);
+        var crystal1 = $('<img src="assets/images/crystal1.png" class="img-responsive crystal1" alt="Ohh shiny...">')
+        $(".crystal1").append(crystal1);
+        var crystal2 = $('<img src="assets/images/crystal2.png" class="img-responsive crystal2" alt="Ohh shiny...">')
+        $(".crystal2").append(crystal2);
+        var crystal3 = $('<img src="assets/images/crystal3.png" class="img-responsive crystal3" alt="Ohh shiny...">')
+        $(".crystal3").append(crystal3);
+        var crystal4 = $('<img src="assets/images/crystal4.png" class="img-responsive crystal4" alt="Ohh shiny...">')
+        $(".crystal4").append(crystal4);
+
     });
 
-    // Appending the crystal image 2 to the DOM
-    $(".crystalizeBtn").click(function () {
-        var crystal = $('<img src="assets/images/crystal2.png" class="img-responsive crystal2" alt="Ohh shiny...">')
-        $(".crystal2").append(crystal);
-    });
-
-    // Appending the crystal image 3 to the DOM
-    $(".crystalizeBtn").click(function () {
-        var crystal = $('<img src="assets/images/crystal3.png" class="img-responsive crystal3" alt="Ohh shiny...">')
-        $(".crystal3").append(crystal);
-    });
-
-    // Appending the crystal image 4 to the DOM
-    $(".crystalizeBtn").click(function () {
-        var crystal = $('<img src="assets/images/crystal4.png" class="img-responsive crystal4" alt="Ohh shiny...">')
-        $(".crystal4").append(crystal);
-    });
-
-
-
+   
 
 
 
