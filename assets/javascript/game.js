@@ -13,14 +13,9 @@ $(document).ready(function () {
 
     
 
-    
-
-
-
 
     
-    // Populates crystals in html on "crystalize" button. 
-    // Generates a random number and resets score. 
+    // Start game on crystalize button.
     // =======================================================================================
 
     // Appends the crystal images to the DOM. ('.one' does it only one time)
@@ -34,14 +29,16 @@ $(document).ready(function () {
         var crystal4 = $('<img src="assets/images/crystal4.png" class="img-responsive crystal4" alt="Ohh shiny...">')
         $(".crystal4").append(crystal4);
 
-    //  Generates a random number
+        //  Generates a random number
         var randomNumber = Math.floor(Math.random() * (120-19)) + 1;
         $("p.randomNum").html(randomNumber);
 
-    // Resets User score
+        // Resets User score
         $(".userScore").html(0);
         $(".wins").html(0);
         $(".losses").html(0);
+
+    
 
     });
 
@@ -55,14 +52,13 @@ $(document).ready(function () {
     // Crystal 1 - Blue 
     $(".crystal1").click(function () {
         // Sets random value of the Crystal to an inter between 12-1
-        var blueCrystal = Math.floor(Math.random() * (12 - 1)) + 1;
+        var blueCrystal = Math.floor(Math.random() * (120 - 1)) + 1;
         console.log("Blue crystal is worth " + blueCrystal);
 
-        var newScore = blueCrystal + userScore;
 
-        console.log(newScore);
+        console.log(userScore + blueCrystal);
         // Populates user score in html. 
-        $(".userScore").html(newScore);
+        $(".userScore").html(userScore + blueCrystal);
 
         
 
@@ -75,11 +71,10 @@ $(document).ready(function () {
         var greenCrystal = Math.floor(Math.random() * (12 - 1)) + 1;
         console.log("Green crystal is worth " + greenCrystal);
 
-        var newScore = userScore + greenCrystal;
 
-        console.log(newScore);
+        console.log(userScore + greenCrystal);
         // Populates user score in html. 
-        $(".userScore").html(newScore);
+        $(".userScore").html(userScore + greenCrystal);
 
     });
 
@@ -91,9 +86,9 @@ $(document).ready(function () {
         console.log("Purple crystal is worth " + purpleCrystal);
 
 
-        console.log(userScore);
+        console.log(userScore + purpleCrystal);
         // Populates user score in html. 
-        $(".userScore").html(purpleCrystal);
+        $(".userScore").html(userScore + purpleCrystal);
 
     });
 
@@ -105,26 +100,29 @@ $(document).ready(function () {
         console.log("Pink crystal is worth " + pinkCrystal);
 
 
-        console.log(userScore);
+        console.log(userScore + pinkCrystal);
         // Populates user score in html. 
-        $(".userScore").html(pinkCrystal);
+        $(".userScore").html(userScore + pinkCrystal);
 
+        
     });
 
 
 
-    // Win | Loss
-    //  =======================================================================================
-    if (userScore === randomNum) {
-        wins++;
-        alert("You won!");
-    } else {
-        if (userScore >= randomNum) {
-            losses--;
-            alert("You lost!");
-        }
-        
-    }
+    
+// Win | Loss
+// =======================================================
+// if (userScore === randomNum) {
+//     wins++;
+//     $(".wins").html(wins);
+//     alert("You won!");
+// };
+
+// if (userScore >= randomNum) {
+//         losses--;
+//         $(".losses").html(losses);
+//         alert("You lost!");
+//     };
 
 
         
