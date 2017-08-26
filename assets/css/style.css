@@ -2,6 +2,7 @@ div.jumbotron {
     text-align: center;
     margin: 2%;
     padding: 2%;
+
 }
 
 img.img-responsive {
@@ -41,4 +42,9 @@ a.btn-primary {
     border-bottom-left-radius: 0.25rem;
     margin: 2%;
     padding: 2%;
+}
+
+div.counters {
+    margin: 5%;
+    padding: 5%;
 }
