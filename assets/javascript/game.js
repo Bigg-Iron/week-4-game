@@ -58,10 +58,11 @@ $(document).ready(function () {
         var blueCrystal = Math.floor(Math.random() * (12 - 1)) + 1;
         console.log("Blue crystal is worth " + blueCrystal);
 
+        var newScore = blueCrystal + userScore;
 
-        console.log(userScore);
+        console.log(newScore);
         // Populates user score in html. 
-        $(".userScore").html(blueCrystal);
+        $(".userScore").html(newScore);
 
         
 
@@ -74,10 +75,11 @@ $(document).ready(function () {
         var greenCrystal = Math.floor(Math.random() * (12 - 1)) + 1;
         console.log("Green crystal is worth " + greenCrystal);
 
+        var newScore = userScore + greenCrystal;
 
-        console.log(userScore);
+        console.log(newScore);
         // Populates user score in html. 
-        $(".userScore").html(greenCrystal);
+        $(".userScore").html(newScore);
 
     });
 
@@ -111,8 +113,22 @@ $(document).ready(function () {
 
 
 
+    // Win | Loss
+    //  =======================================================================================
+    if (userScore === randomNum) {
+        wins++;
+        alert("You won!");
+    } else {
+        if (userScore >= randomNum) {
+            losses--;
+            alert("You lost!");
+        }
+        
+    }
 
 
+        
+    
 
 
 
